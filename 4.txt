@@ -1,0 +1,79 @@
+178  kubectl run n2 --image nginx
+  179  kubectl get pods
+  180  kubectl get pod -o wide
+  181  kubectl run bb1 --image busybox
+  182  kubectl get pods
+  183  kubectl get pod -o wide
+  184  kubectl run bb2 --image busybox -- sleep 5
+  185  kubectl get pod -o wide
+  186  kubectl api-resources
+  187  kubectl explain pod
+  188  clear
+  189  dir
+  190  mkdir kubernetes
+  191  cd kubernetes
+  192  touch webserver.yml
+  193  vim webserver.yml
+  194  cat webserver.yml
+  195  kubectl create -f webserver.yml
+  196  kubectl get pods
+  197  kubectl get pod -o wide
+  198  elink
+  199  kubectl delete -f webserver.yml
+  200  kubectl get pod -o wide
+  201  kubectl delete pod bb1
+  202  kubectl delete pod bb2
+  203  kubectl get pod -o wide
+  204  code --user-data-dir=/root/vscodedata --no-sandbox
+  205  history
+  206  kubectl create deployment mywebserver --image=nginx
+  207  kubectl get deployments
+  208  kubectl get pods
+  209  kubectl get deployment -o wide
+  210  kubectl get pod -o wide
+  211  curl http://172.16.248.68
+  212  wget http://10.0.31.1/labsk8s/1pod.yml
+  213  kubectl apply -f 1pod.yml
+  214  kubectl get pods
+  215  kubectl describe pod nginx-pod
+  216  kubectl delete -f 1pod.yml 
+  217  kubectl apply -f mypod.yml
+  218  kubectl get pods
+  219  kubectl delete pods --all
+  220  kubectl get pods
+  221  kubectl get deployment
+  222  kubectl delete deploy mywebserver
+  223  wget http://10.0.31.1/labsk8s/mulit-container-pod.yml
+  224  wget http://10.0.31.1/labsk8s/2.multi-container-pod.yml
+  225  wget http://10.0.31.1/labsk8s/2.multi-container-pod.yaml
+  226  kubectl apply -f 2.multi-container-pod.yaml 
+  227  kubectl get pods
+  228  watch kubectl get pods
+  229  kubectl get pods
+  230  kubectl describe pod mulitcontainerpod
+  231  kubectl describe pod multicontainerpod
+  232  kubectl exec -it multicontainerpod -c c1 sh
+  233  kubectl get pod -o wide
+  234  kubectl apply -f mypod.yml webserver.yml
+  235  kubectl apply -f mypod.yml 1pod.yml 
+  236  kubectl apply -f 1pod.yml 
+  237  kubectl get pods
+  238  kubectl delete pods --all
+  239  kubectl apply -f combinedpod.yml 
+  240  kubectl get pods
+  241  kubectl get pod -o wide
+  242  watch kubectl get pod -o wide
+  243  wget http://10.0.31.1/labsk8s/3.init-container2.yml
+  244  clear
+  245  kubectl apply -f 3.init-container2.yml 
+  246  kubectl get pods
+  247  watch kubectl get pods
+  248  wget http://10.0.31.1/labsk8s/4.init-container.yml
+  249  kubectl apply -f 4.init-container.yml 
+  250  kubectl get pods
+  251  kubectl get pod -o wide
+  252  curl http://172.16.113.73
+  253  kubectl get pods
+  254  kubectl delete pod nginx-pod-rrd-63
+  255  kubectl get pods
+  256  history

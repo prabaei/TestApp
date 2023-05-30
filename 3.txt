@@ -1,0 +1,58 @@
+  145  kubeadm init |tee bootstrap.txt
+  146  systemctl enable --now kubelet
+  147  mkdir -p $HOME/.kube
+  148  cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  149  chown $(id -u):$(id -g) $HOME/.kube/config
+  150  kubectl get nodes
+  151  systemctl status kubelet
+  152  kubectl get nodes
+  153  code --user-data-dir=/root/vscodedata --no-sandbox
+  154  cat bootstrap
+  155  dir
+  156  cat bootstrap.txt
+  157  kubectl get nodes
+  158  kubectl get pods --all-namespaces
+  159  kubectl describe node rrd-61
+  160  curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/calico.yaml -O
+  161  kubectl apply -f calico.yaml
+  162  kubectl get pods --all-namespaces
+  163  kubectl get nodes
+  164  cat bootstrap.txt
+  165  kubectl get nodes
+  166  kubectl version
+  167  kubectl version --short
+  168  kubectl cluster info
+  169  kubectl cluster-info
+  170  kubectl get pods
+  171  kubectl run n1 --image nginx
+  172  kubectl get pogs
+  173  kubectl get pods
+  174  kubectl get pod -o wide
+  175  curl http://172.16.113.65
+  176  kubectl run n2 --image nginx
+  177  kubectl get pods
+  178  kubectl get pod -o wide
+  179  kubectl run bb1 --image busybox
+  180  kubectl get pods
+  181  kubectl get pod -o wide
+  182  kubectl run bb2 --image busybox -- sleep 5
+  183  kubectl get pod -o wide
+  184  kubectl api-resources
+  185  kubectl explain pod
+  186  clear
+  187  dir
+  188  mkdir kubernetes
+  189  cd kubernetes
+  190  touch webserver.yml
+  191  vim webserver.yml
+  192  cat webserver.yml
+  193  kubectl create -f webserver.yml
+  194  kubectl get pods
+  195  kubectl get pod -o wide
+  196  elink
+  197  kubectl delete -f webserver.yml
+  198  kubectl get pod -o wide
+  199  kubectl delete pod bb1
+  200  kubectl delete pod bb2
+  201  kubectl get pod -o wide
+  202  code --user-data-dir=/root/vscodedata --no-sandbox

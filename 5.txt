@@ -1,0 +1,389 @@
+  1  dnf install openssh-server
+    2  systemctl start sshd
+    3  systemctl status sshd
+    4  cat /etc/os-release 
+    5  vim /etc/ssh/sshd_config 
+    6  exit
+    7  yum update
+    8  yum update all
+    9  yum check-update
+   10  cat /etc/os-release 
+   11  exit
+   12  ifconfig
+   13  ssh root@10.0.36.3
+   14  ssh root@10.0.36.2
+   15  ssh root@10.0.36.2
+   16  ssh root@10.0.36.3
+   17  hostname
+   18  cat /etc/hosts
+   19  vim /etc/hosts
+   20  cat /etc/hosts
+   21  vim /etc/hosts
+   22  cat /etc/hosts
+   23  getenforce
+   24  systemclt status firewalld
+   25  systemctl status firewalld
+   26  yum remove docker                   docker-client                   docker-client-latest                   docker-common                   docker-latest                   docker-latest-logrotate                   docker-logrotate                   docker-engine                   podman                   containers-common
+   27  yum install -y yum-utils
+   28  yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo   
+   29  yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   30  docker version
+   31  docker ps
+   32  history
+   33  dokcer version
+   34  hotname -i
+   35  yum install terminator
+   36  ping RRD-61
+   37  ping RRD-62
+   38  ping RRD-63
+   39  sleep 30&
+   40  getenforce 
+   41  setenforce 0
+   42  getenforce
+   43  vim /etc/sysconfig/selinux
+   44  cat /etc/sysconfig/selinux
+   45  systemctl status firewalld 
+   46  systemctl disable --now firewalld
+   47  history
+   48  cat /etc/hosts
+   49  whoami
+   50  getenforce
+   51  systemctl status firewalld
+   52  systemctl status docker
+   53  systemctl enable --now docker
+   54  systemctl status docker
+   55  modprobe br_netfilter
+   56  lsmod | grep br_netfilter
+   57  modprobe overlay
+   58  lsmod | grep overlay
+   59  echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
+   60  sysctl -a | grep net.bridge.bridge-nf-call-iptables
+   61  containerd config default | sudo tee /etc/containerd/config.toml
+   62  sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
+   63  systemctl restart docker
+   64  swapoff -a
+   65  sed -e '/swap/ s/^#*/#/' -i /etc/fstab
+   66  cat <<EOF | tee /etc/yum.repos.d/kubernetes.repo
+   67  [kubernetes]
+   68  name=Kubernetes
+   69  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch
+   70  enabled=1
+   71  gpgcheck=1
+   72  gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+   73  exclude=kubelet kubeadm kubectl
+   74  EOF
+   75  cat /etc/yum.repos.d/kubernetes.repo
+   76  yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+   77  systemctl enable --now kubelet
+   78  systemctl status kubelet
+   79  systemctl enable --now kubelet
+   80  systemctl status kubelet
+   81  systemctl start kubelet
+   82  systemctl status kubelet
+   83  systemctl stop docker
+   84  systemctl status docker
+   85  systemctl stop docker
+   86  systemctl status docker
+   87  systemctl status kubelet
+   88  systemctl start kubelet
+   89  systemctl status kubelet
+   90  systemctl status docker
+   91  docker version
+   92  systemcel start docker
+   93  systemctl start docker
+   94  systemctl stats docker
+   95  systemctl status docker
+   96  systemctl stop docker
+   97  systemctl start docker
+   98  systemctl status docker
+   99  systemctl status kubelet
+  100  cat <<EOF | tee /etc/yum.repos.d/kubernetes.repo
+  101  [kubernetes]
+  102  name=Kubernetes
+  103  baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch
+  104  enabled=1
+  105  gpgcheck=1
+  106  gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+  107  exclude=kubelet kubeadm kubectl
+  108  EOF
+  109  setenforce 0
+  110  sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+  111  yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+  112  kubeadm
+  113  kubeinit adm
+  114  ssh root@RRD-62
+  115  ssh root@RRD-63
+  116  docker version
+  117  ssh root@RRD-62
+  118  docker ps
+  119  systemctl status docker
+  120  rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  121  sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+  122  dnf check-update
+  123  dnf install -y code
+  124  code --user-data-dir=/root/vscodedata --no-sandbox
+  125  install add-on docker
+  126  dnf install -y code
+  127  code --user-data-dir=/root/vscodedata --no-sandbox
+  128  rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  129  sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+  130  kubeinit adm |tee bootstrap.txt
+  131  systemctl status kubelet
+  132  kubeinit adm |tee bootstrap.txt
+  133  sudo kubeinit adm |tee bootstrap.txt
+  134  systemctl enable --now kubelet
+  135  systemctl status kubelet
+  136  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  137  sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+  138  dnf check-update
+  139  sudo dnf install code
+  140  code
+  141  code .
+  142  code --user-data-dir=/root/vscodedata --no-sandbox
+  143  systemctl enable --now kubelet
+  144  systemctl status kubelet
+  145  kubeadm init |tee bootstrap.txt
+  146  systemctl enable --now kubelet
+  147  mkdir -p $HOME/.kube
+  148  cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  149  chown $(id -u):$(id -g) $HOME/.kube/config
+  150  kubectl get nodes
+  151  systemctl status kubelet
+  152  kubectl get nodes
+  153  ssh root@RRD-63
+  154  ssh root@RRD-62
+  155  code --user-data-dir=/root/vscodedata --no-sandbox
+  156  cat bootstrap
+  157  dir
+  158  cat bootstrap.txt
+  159  kubectl get nodes
+  160  kubectl get pods --all-namespaces
+  161  kubectl describe node rrd-61
+  162  curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/calico.yaml -O
+  163  kubectl apply -f calico.yaml
+  164  kubectl get pods --all-namespaces
+  165  kubectl get nodes
+  166  cat bootstrap.txt
+  167  kubectl get nodes
+  168  kubectl version
+  169  kubectl version --short
+  170  kubectl cluster info
+  171  kubectl cluster-info
+  172  kubectl get pods
+  173  kubectl run n1 --image nginx
+  174  kubectl get pogs
+  175  kubectl get pods
+  176  kubectl get pod -o wide
+  177  curl http://172.16.113.65
+  178  kubectl run n2 --image nginx
+  179  kubectl get pods
+  180  kubectl get pod -o wide
+  181  kubectl run bb1 --image busybox
+  182  kubectl get pods
+  183  kubectl get pod -o wide
+  184  kubectl run bb2 --image busybox -- sleep 5
+  185  kubectl get pod -o wide
+  186  kubectl api-resources
+  187  kubectl explain pod
+  188  clear
+  189  dir
+  190  mkdir kubernetes
+  191  cd kubernetes
+  192  touch webserver.yml
+  193  vim webserver.yml
+  194  cat webserver.yml
+  195  kubectl create -f webserver.yml
+  196  kubectl get pods
+  197  kubectl get pod -o wide
+  198  elink
+  199  kubectl delete -f webserver.yml
+  200  kubectl get pod -o wide
+  201  kubectl delete pod bb1
+  202  kubectl delete pod bb2
+  203  kubectl get pod -o wide
+  204  code --user-data-dir=/root/vscodedata --no-sandbox
+  205  history
+  206  kubectl create deployment mywebserver --image=nginx
+  207  kubectl get deployments
+  208  kubectl get pods
+  209  kubectl get deployment -o wide
+  210  kubectl get pod -o wide
+  211  curl http://172.16.248.68
+  212  code --user-data-dir=/root/vscodedata --no-sandbox
+  213  ssh root@RRD-63
+  214  wget http://10.0.31.1/labsk8s/1pod.yml
+  215  kubectl apply -f 1pod.yml
+  216  kubectl get pods
+  217  kubectl describe pod nginx-pod
+  218  kubectl delete -f 1pod.yml 
+  219  kubectl apply -f mypod.yml
+  220  kubectl get pods
+  221  kubectl delete pods --all
+  222  kubectl get pods
+  223  kubectl get deployment
+  224  kubectl delete deploy mywebserver
+  225  wget http://10.0.31.1/labsk8s/mulit-container-pod.yml
+  226  wget http://10.0.31.1/labsk8s/2.multi-container-pod.yml
+  227  wget http://10.0.31.1/labsk8s/2.multi-container-pod.yaml
+  228  kubectl apply -f 2.multi-container-pod.yaml 
+  229  kubectl get pods
+  230  watch kubectl get pods
+  231  kubectl get pods
+  232  kubectl describe pod mulitcontainerpod
+  233  kubectl describe pod multicontainerpod
+  234  kubectl exec -it multicontainerpod -c c1 sh
+  235  kubectl get pod -o wide
+  236  kubectl apply -f mypod.yml webserver.yml
+  237  kubectl apply -f mypod.yml 1pod.yml 
+  238  kubectl apply -f 1pod.yml 
+  239  kubectl get pods
+  240  kubectl delete pods --all
+  241  kubectl apply -f combinedpod.yml 
+  242  kubectl get pods
+  243  kubectl get pod -o wide
+  244  watch kubectl get pod -o wide
+  245  wget http://10.0.31.1/labsk8s/3.init-container2.yml
+  246  clear
+  247  kubectl apply -f 3.init-container2.yml 
+  248  kubectl get pods
+  249  watch kubectl get pods
+  250  wget http://10.0.31.1/labsk8s/4.init-container.yml
+  251  kubectl apply -f 4.init-container.yml 
+  252  kubectl get pods
+  253  kubectl get pod -o wide
+  254  curl http://172.16.113.73
+  255  kubectl get pods
+  256  kubectl delete pod nginx-pod-rrd-63
+  257  kubectl get pods
+  258  history
+  259  docker version
+  260  code --user-data-dir=/root/vscodedata --no-sandbox
+  261  dir
+  262  cd kubernetes/
+  263  watch kubectl get all
+  264  watch kubectl get pod -o wide
+  265  kubectl get rs --all
+  266  kubectl get rs all
+  267  kubectl get deployments
+  268  kubectl describe myowndeployment
+  269  kubectl describe rs myowndeployment
+  270  keubectl get deploy
+  271  kubectl get deploy
+  272  watch kubectl get pods
+  273  watch kubectl get pods -o  wide
+  274  curl http://172.16.113.99
+  275  kubectl get pods
+  276  kubectl exec pod deployment-7bf7876d69-4zm45 sh
+  277  kubectl exec pod deployment-7bf7876d69-4zm45 -c nginxappc1 sh
+  278  kubectl exec deployment-7bf7876d69-4zm45 -c nginxappc1 sh
+  279  kubectl exec pods deployment-7bf7876d69-4zm45 -c nginxappc1 sh
+  280  kubectl exec -ty  deployment-7bf7876d69-4zm45 -c nginxappc1 sh
+  281  kubectl exec -tty deployment-7bf7876d69-4zm45 -c nginxappc1 sh
+  282  kubectl exec -it deployment-7bf7876d69-4zm45 -c nginxappc1 sh
+  283  kubectl exec -it deployment-7bf7876d69-4zm45 sh
+  284  kubectl get pods
+  285  kubectl exec -it deployment-7bf7876d69-4zm45  sh
+  286  kubectl exec -it deployment-7bf7876d69-4zm45 sh
+  287  kubectl exec -it deployment-7bf7876d69-4zm45 bin/bash
+  288  kubectl exec -it deployment-7bf7876d69-bmv6b bin/bash
+  289  kubectl exec -it deployment-7bf7876d69-bmv6b sh
+  290  kubectl exec -it deployment-7bf7876d69-bmv6b /bin/sh
+  291  kubectl get all
+  292  kubectl exec -it pod/myowndeployment-7bf7876d69-bmv6b /bin/sh
+  293  kubectl exec -it pod/myowndeployment-7bf7876d69-bmv6b -c nginxappc1 /bin/sh
+  294  kubectl get all
+  295  kubectl exec -it pod/myowndeployment-85f49758d4-7675m  -c nginxappc1 /bin/sh
+  296  kubectl get all
+  297  kubectl exec -it pod/myowndeployment-7bf7876d69-5kjgh -c nginxappc1 /bin/sh
+  298  hostname -i
+  299  dir
+  300  cd ..
+  301  dir
+  302  ls -l
+  303  cat /etc/hosts
+  304  vim /etc/hosts
+  305  cat /etc/hosts
+  306  hostname -i
+  307  echo "this is $(hostname -i)"
+  308  wget http://10.0.31.1/labsk8s/5.RS.yml
+  309  kubectl get pods
+  310  kubectl delete pods --all
+  311  kubectl get pods
+  312  kubectl apply -f 5.RS.yml 
+  313  kubectl get pods all
+  314  kubectl get all
+  315  kubectl explain replicaset
+  316  kubectl explain replicationcontroller
+  317  kubectl apply -f myreplicaset.yml 
+  318  kubectl get pods
+  319  kubectl get all
+  320  kubectl delete pod/myapp-rs-65fn6 
+  321  kubectl get all
+  322  kubectl get pods -o wide
+  323  curl http://172.16.248.81
+  324  curl http://172.16.248.81:8080
+  325  curl http://172.16.113.82:8080
+  326  kubectl scale rs myapp-rs --replicas=1
+  327  kubectl get all
+  328  kubectl delete rs myapp-rs
+  329  kubectl delete -f 5.RS.yml 
+  330  kubectl get all
+  331  kubectl apply -f 5.RS.yml 
+  332  kubectl get all
+  333  kubectl get pods -o wide
+  334  kubectl delete rs replicasetdemo
+  335  kubectl apply -f 5.RSnew.yml 
+  336  kubectl get pods -o wide
+  337  clear
+  338  wget http://10.0.31.1/labsk8s/6.0.deployment.yml
+  339  kubectl explain deployment
+  340  kubectl get all
+  341  kubectl delete replicaset.apps/replicasetdemo 
+  342  kubectl get all
+  343  kubectl apply -f deploymentpraba.yaml 
+  344  kubectl get all
+  345  kubectl apply -f deploymentpraba.yaml 
+  346  wget http://10.0.31.1/labsk8s/6.1.deployment.yml
+  347  kubectl get deployment
+  348  kubectl set image deployment/myowndeployment nginxappc1=nginx:1.25 --record
+  349  kubectl rollout status deployment/myowndeployment
+  350  kubectl rollout history deployment/myowndeployment
+  351  kubectl rollout undo deployment/myowndeployment
+  352  kubectl rollout status deployment/myowndeployment
+  353  kubectl rollout undo deployment/myowndeployment --to-revision=2
+  354  wget http://10.0.31.1/labsk8s/6.2.recreate.yml
+  355  wget http://10.0.31.1/labsk8s/6.3.deployment%20copy.yml
+  356  kubectl get deployment
+  357  kubectl delete deploy --all
+  358  kubectl get pods
+  359  kubectl apply -f 4.init-container.yml 
+  360  kubectl get pods
+  361  kubectl exec -it init-container-demo /bin/sh
+  362  code --user-data-dir=/root/vscodedata --no-sandbox
+  363  history
+  364  kubectl apply -f cronjobdemo.yml 
+  365  kubectl get all
+  366  wget http://10.0.31.1/labsk8s/8.1.job2.yml
+  367  kubectl apply -f 8.1.job2.yml
+  368  kubectl get all
+  369  watchkubectl get all
+  370  kubectl get all --watch
+  371  watch kubectl get all
+  372  kubectl get deployemtns
+  373  kubectl get deploy
+  374  kubectl get all
+  375  kubectl apply -f 6.1.deployment.yml 
+  376  kubectl expose deployment nginx-deployment  --name demo-deploy-service --type ClusterIP --label app=nginx --port 80
+  377  kubectl expose deployment nginx-deployment  --name demo-deploy-service --type ClusterIP --labels app=nginx --port 80
+  378  wget http://10.0.31.1/labsk8s/7.daemonset.yml
+  379  kubectl apply -f 7.daemonset.yml 
+  380  kubectl get all
+  381  kubectl delete deployment.apps/nginx-deployment
+  382  kubectl get all
+  383  kubectl get pod -o wide
+  384  kubectl apply -f mydaemonset.yml 
+  385  kubectl get all
+  386  kubectl get pod -o wide
+  387  kubectl apply -f mydaemonset.yml 
+  388  kubectl get pod -o wide
+  389  wget http://10.0.31.1/labsk8s/8.2.cronjob.yml

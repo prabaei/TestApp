@@ -1,0 +1,20 @@
+407  kubectl apply -f 10.3.0apache.yml 
+  408  kubectl get all
+  409  kubectl top node
+  410  kubectl top pod/php-apache-5bdbb8dbf8-xt67t 
+  411  kubectl top pod php-apache-5bdbb8dbf8-xt67t 
+  412  kubectl get pod -o wide
+  413  kubectl describe node rrd-62
+  414  clear
+  415  kubectl apply -f 10.3.1metricsserver.yml
+  416  kubectl apply -f 10.3.1metricsserver.yaml 
+  417  kubectl get all
+  418  kubectl get all -n kube-system
+  419  kubectl top node
+  420  kubectl top pod
+  421  kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+  422  kubectl get all
+  423  kubectl describe horizontalpodautoscaler.autoscaling/php-apache
+  424  kubectl get all
+  425  kubectl get hpa php-apache --watch
+  426  history

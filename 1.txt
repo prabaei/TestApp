@@ -1,0 +1,32 @@
+15  yum install terminator
+   16  ping RRD-61
+   17  ping RRD-62
+   18  ping RRD-63
+   19  sleep 30&
+   20  getenforce 
+   21  setenforce 0
+   22  getenforce
+   23  vim /etc/sysconfig/selinux
+   24  cat /etc/sysconfig/selinux
+   25  systemctl status firewalld 
+   26  systemctl disable --now firewalld
+
+
+12  ifconfig
+   13  hostname
+   14  cat /etc/hosts
+   15  vim /etc/hosts
+   16  cat /etc/hosts
+   17  vim /etc/hosts
+   18  cat /etc/hosts
+   19  getenforce
+   20  systemclt status firewalld
+   21  systemctl status firewalld
+   22  yum remove docker                   docker-client                   docker-client-latest                   docker-common                   docker-latest                   docker-latest-logrotate                   docker-logrotate                   docker-engine                   podman                   containers-common
+   23  yum install -y yum-utils
+   24  yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo   
+   25  yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   26  docker version
+   27  docker ps
+   28  history
+

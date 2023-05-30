@@ -1,0 +1,16 @@
+kubectl get nodes
+kubectl get pods --all-namespaces
+kubectl version
+kubectl cluster-info
+kubectl run podname -
+
+kubectl get po # pods
+kubectl get pods -o wide # all details
+
+kubectl describe pod <podname>
+
+kubectl run <podname> --image nginx
+
+kubectl edit pod <podname>
+
+kubectl create -f <yml file>
