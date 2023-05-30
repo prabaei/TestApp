@@ -1,0 +1,34 @@
+Kubectl Logs Command Quick Reference
+POD logging
+1. Print the logs for a pod
+kubectl logs <pod_name>
+
+2. Print the logs for the last 6 hours for a pod
+kubectl logs --since=6h <pod_name>
+
+3. Get the most recent 50 lines of logs for a pod
+kubectl logs --tail=50 <pod_name>
+
+4. Print the logs for a pod and follow new logs
+kubectl logs -f <pod_name>
+
+5. Print the logs for a container in a pod
+kubectl logs -c <container_name> <pod_name>
+
+6. Output the logs for a pod into a file named ‘pod.log’
+kubectl logs <pod_name> > pod.log
+
+7. View the logs for a previously failed pod
+kubectl logs --previous <pod_name>
+
+8. View the logs for all containers in a pod
+kubectl logs <pod_name> --all-containers
+
+Node Logging =====================================
+default path log container logs /var/log/containers
+
+
+==========================================================
+
+💡 You might also like:
+##https://spacelift.io/blog/kubectl-logs

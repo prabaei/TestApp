@@ -1,0 +1,100 @@
+Lab: Understanding and Working with PODs
+Introduction
+
+Pods are the Smallest Deployable units of computing that can create and manage in Kubernetes.
+In this Lab, you will learn below items:
+Objective:
+* Creating a Pod with imperative syntax
+* Creating a Pod with declarative syntax
+* Generate the pod manifest in the yml & json format
+* Reading the Pod's information and metadata
+* Listing the objects in JSON or YAML
+* Interacting with the container inside a Pod
+* Deleting a Pod
+* Create a Temporary pod
+* Clean up
+Note: Ensure you have running cluster deployed
+Ensure that you have logged-in as root user with password as linux on xmaster node.
+1 Create a pod with Imperative Method
+1.1 Let’s Create a pod by using Imperative method, by executing the below command.
+# kubectl run web01 --image nginx
+
+1.2 Let’s list the pod status and delete, by executing the below command.
+# kubectl get pods
+
+# kubectl delete pod web01
+
+2 Create a pod with Declarative Method
+2.1 Let’s wget the file from git repository which contains manifests required for this exercise, by executing the below command.
+# wget http://10.0.31.1/labsk8s/1webserver.yml
+2.2 Let’s view the manifest file.
+cat -n 1webserver.yml
+2.3 Let’s create a pod containing a nginx server using 1pod.yml file, by executing the below command.
+# kubectl create -f 1webserver.yml
+2.4 Let’s list all of the pods which are in running state:
+# kubectl get pods
+2.5 To see the detailed output, run the below command
+# kubectl get pods -o wide
+2.6 Let’s capture Pod IP to a variable by running below command
+# kubectl get pod web-server -o jsonpath='{.status.podIP}'
+# podIP=$(kubectl get pod web-server -o jsonpath='{.status.podIP}')
+# echo $podIP
+Note: Wait till the pod status changes to “running” status.
+2.7 Let’s access the pod using the ip displayed in previous step
+# curl $podIP
+2.8 Let’s execute the describe command and check pod details:
+# kubectl describe pod web-server1
+2.9 Let’s check the logs of the web-server application
+# kubectl logs web-server1
+2.10 Let’s dry-run the creation of the pod, by executing the below command.
+# kubectl run web02 --image nginx --dry-run=client
+
+3 Generate the pod manifest in the yml & json format
+3.1 	Let’s generate the pod manifest in the yml & json format, by executing the below commands.
+# kubectl run web02 --image nginx --dry-run=client -o yaml | tee web02-pod.yml
+
+# kubectl run web02 --image nginx --dry-run=client -o json | tee web02-pod.json
+3.2 Let’s create a pod using the web02-pod.json file which we saved in the above step.
+# kubectl create -f web02-pod.json
+3.3 Let’s list all of the pods which are in running state, by executing the below command.
+# kubectl get pods
+3.4 Let’s list the pods with default labels
+Kubectl get pods –show-labels
+3.5 Let’s label the pod web-server
+# kubectl label pod web-server app=web-server
+3.6 Let’s list the pods with default labels
+# kubectl get pods --show-labels
+3.7 Let’s overwrite the existing label with new label
+# kubectl label pods web01 web02 app=web-server2
+3.8 Let’s list the pods using labels
+# kubectl get pods -l app=web-server2
+
+
+3.9 Annotations
+You can use Kubernetes annotations to attach arbitrary non-identifying metadata to objects. Clients such as tools and libraries can retrieve this metadata.
+# kubectl annotate pod web-server repository=http://10.0.31.1/labsk8s/1webserver.yml
+3.10 Let’s describe the pod to verify
+# kubectl describe pod web-server
+3.11 Let’s delete the pod using label
+# kubectl delete pod -l app=web-server2
+3.12 Let’s get a shell to the running container:
+# kubectl exec web-server -it -c web-server -- /bin/bash
+3.13 Let’s do ls inside the running container
+# ls
+3.14 In your shell, create an index.html file in the /usr/share/nginx/html directory:
+# echo 'Hello Web-server' > /usr/share/nginx/html/index.html
+3.15 Let’s verify
+# curl http://localhost/ 
+# exit
+3.16 Let’s delete pod , by executing the below command.
+# kubectl delete -f 1webserver.yml
+
+4 Create a Temporary pod
+4.1 Let’s create the temporary pod
+# kubectl run --rm -i -t --image=busybox:1.28.0 temporary-pod -- sh
+4.2 Coming out of the pod will delete the pod also
+# exit
+
+4.3 Clean-up
+# rm -rf web02-pod.yml 1webserver.yml web02-pod.json
+

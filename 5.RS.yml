@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replicasetdemo
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      segment: business
+  template:
+    metadata:
+      labels:
+        segment: business
+    spec:
+      containers:
+      - name: web-server
+        image: nginx:1.20
+
+
+  #kubectl explain replicaset
+  #kubectl apply -f 5.RS.yml 
+  #kubectl get all
+  #kubectl get replicaset
+  #kubectl get rs
+  #kubectl get pods
+  #kubectl describe rs replicasetdemo
+  #kubectl get pods -o wide
+  #kubectl delete pod replicasetdemo-kgrmm
+  #kubectl get pods -o wide
+  #kubectl delete pod replicasetdemo-zsqqd
+  #kubectl get pods -o wide
+  #kubectl apply -f 5.RS.yml 
+  #kubectl get all
+  #kubectl scale rs replicasetdemo --replicas=3
+  #kubectl get all
+  #kubectl describe rs replicasetdemo 

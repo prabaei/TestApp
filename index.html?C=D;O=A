@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /labsk8s</title>
+ </head>
+ <body>
+<h1>Index of /labsk8s</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=D">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/">Parent Directory</a>       </td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="0.installvscode.txt">0.installvscode.txt</a>    </td><td align="right">2023-05-22 21:31  </td><td align="right">472 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="1.1.prepare.txt">1.1.prepare.txt</a>        </td><td align="right">2023-05-24 10:01  </td><td align="right">1.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="1.2.prepare2.txt">1.2.prepare2.txt</a>       </td><td align="right">2023-05-24 10:01  </td><td align="right">507 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="1pod.yml">1pod.yml</a>               </td><td align="right">2023-05-25 10:25  </td><td align="right">512 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="1webserver.yml">1webserver.yml</a>         </td><td align="right">2023-05-24 11:26  </td><td align="right">108 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="2.installkubernetes.txt">2.installkubernetes.txt</a></td><td align="right">2023-05-24 10:04  </td><td align="right">817 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="2.multi-container-pod.yaml">2.multi-container-po..&gt;</a></td><td align="right">2023-05-25 10:54  </td><td align="right">176 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="3.init-container2.yml">3.init-container2.yml</a>  </td><td align="right">2023-05-25 11:19  </td><td align="right">525 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="3.installk8scnicalico.txt">3.installk8scnicalic..&gt;</a></td><td align="right">2023-05-23 13:53  </td><td align="right">290 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="4.init-container.yml">4.init-container.yml</a>   </td><td align="right">2023-05-25 11:20  </td><td align="right">729 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="4.joinworkernodes.txt">4.joinworkernodes.txt</a>  </td><td align="right">2023-05-23 14:42  </td><td align="right">131 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="5.RS.yml">5.RS.yml</a>               </td><td align="right">2023-05-26 10:33  </td><td align="right">796 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="5.workingwithpod.txt">5.workingwithpod.txt</a>   </td><td align="right">2023-05-24 09:56  </td><td align="right">4.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="6.0.deployment.yml">6.0.deployment.yml</a>     </td><td align="right">2023-05-26 12:20  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="6.1.deployment.yml">6.1.deployment.yml</a>     </td><td align="right">2023-05-26 12:20  </td><td align="right">1.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="6.2.recreate.yml">6.2.recreate.yml</a>       </td><td align="right">2023-05-26 12:20  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="6.3.deployment%20copy.yml">6.3.deployment copy.yml</a></td><td align="right">2023-05-26 12:20  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="6.LabDeployments.txt">6.LabDeployments.txt</a>   </td><td align="right">2023-05-26 12:20  </td><td align="right">3.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="7.daemonset.yml">7.daemonset.yml</a>        </td><td align="right">2023-05-29 10:34  </td><td align="right">725 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="8.0.job.yml">8.0.job.yml</a>            </td><td align="right">2023-05-29 11:15  </td><td align="right">313 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="8.1.job2.yml">8.1.job2.yml</a>           </td><td align="right">2023-05-29 11:15  </td><td align="right">300 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="8.2.cronjob.yml">8.2.cronjob.yml</a>        </td><td align="right">2023-05-29 11:15  </td><td align="right">629 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="10.0.k8slogs.txt">10.0.k8slogs.txt</a>       </td><td align="right">2023-05-30 11:18  </td><td align="right">966 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="10.00logdemo.yml">10.00logdemo.yml</a>       </td><td align="right">2023-05-30 11:18  </td><td align="right">177 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="10.1memory-sample.yml">10.1memory-sample.yml</a>  </td><td align="right">2023-05-30 11:18  </td><td align="right">386 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="10.2memoryhog.yml">10.2memoryhog.yml</a>      </td><td align="right">2023-05-30 11:18  </td><td align="right">338 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="10.3.0apache.yml">10.3.0apache.yml</a>       </td><td align="right">2023-05-30 11:18  </td><td align="right">2.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="10.3.1metricsserver.yaml">10.3.1metricsserver...&gt;</a></td><td align="right">2023-05-30 11:18  </td><td align="right">4.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="10.4.hpa.yml">10.4.hpa.yml</a>           </td><td align="right">2023-05-30 11:18  </td><td align="right">331 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="10.8.cmfref.txt">10.8.cmfref.txt</a>        </td><td align="right">2023-05-30 11:18  </td><td align="right">  0 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="11webserver.yml">11webserver.yml</a>        </td><td align="right">2023-05-24 11:27  </td><td align="right">108 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/layout.gif" alt="[   ]"></td><td><a href="k8s.0.Environment%20Setup.pdf">k8s.0.Environment Se..&gt;</a></td><td align="right">2023-05-22 13:22  </td><td align="right">257K</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+</body></html>

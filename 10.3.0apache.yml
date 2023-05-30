@@ -1,0 +1,85 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-apache
+spec:
+  selector:
+    matchLabels:
+      run: php-apache
+  template:
+    metadata:
+      labels:
+        run: php-apache
+    spec:
+      containers:
+      - name: php-apache
+        image: registry.k8s.io/hpa-example
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: php-apache
+  labels:
+    run: php-apache
+spec:
+  ports:
+  - port: 80
+  selector:
+    run: php-apache
+
+#kubectl apply -f apache.yml
+
+#install metrics server 
+#kubectl apply -f 10.3.1metricsserver.yml
+#If you install from directly github follow the below steps
+#kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+#kubectl -n kube-system get pods
+#metrics pod will not run because of authentication settings
+#https://gist.github.com/NileshGule/8f772cf04ea6ae9c76d3f3e9186165c2
+#kubectl -n kube-system edit deploy metrics-server
+##
+#      containers:
+#      - args:
+#        - --cert-dir=/tmp
+#        - --secure-port=4443
+#        - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+#        - --kubelet-use-node-status-port
+#        - --metric-resolution=15s
+#        command:
+#        - /metrics-server
+#        - --kubelet-insecure-tls
+#        - --kubelet-preferred-address-types=InternalIP
+## add above last 4 lines after resolution-15s line
+###save
+# kubectl top pod / node name
+
+#kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+
+# You can use "hpa" or "horizontalpodautoscaler"; either name works OK.
+#kubectl get hpa
+
+#Increase the work load
+# Run this in a separate terminal
+# so that the load generation continues and you can carry on with the rest of the steps
+# kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
+
+#in another terminal watch 
+### type Ctrl+C to end the watch when you're ready
+## kubectl get hpa php-apache --watch
+
+
+##kubectl get deployment php-apache
+
+# type Ctrl+C to end the watch when you're ready
+###kubectl get hpa php-apache --watch
+##https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
+
+
+

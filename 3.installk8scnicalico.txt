@@ -1,0 +1,9 @@
+kubectl get nodes
+kubectl get pods --all-namespaces
+kubectl describe node rrd-11
+kubectl get pods --all-namespaces
+curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/calico.yaml -O
+kubectl apply -f calico.yaml
+kubectl get pods --all-namespaces
+kubectl get nodes
+

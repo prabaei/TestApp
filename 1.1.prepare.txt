@@ -1,0 +1,41 @@
+################## in all K8s Nodes #############################
+Set Hostname ##set proper hostname
+add host entries in /etc/hosts file
+10.0.3x.1 RRD-X1
+10.0.3x.2 RRD-X2 
+10.0.3x.3 RRD-X3
+Can be done with command line like below command
+# cat > /etc/hosts <<EOF
+10.0.31.1 RRD-11
+10.0.31.2 RRD-12
+10.0.31.3 RRD-13
+127.0.0.1 localhost
+EOF 
+
+ping with hostname 
+ping -c RRD-Xy
+
+disable SElinux
+cat /etc/sysconfig/selinux | grep SELINUX=   ########to know current selinux setting
+sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+cat /etc/sysconfig/selinux | grep SELINUX=
+setenforce 0
+
+or use vim editor change value
+
+
+Disable firewall service
+# systemctl disable --now firewalld 
+# systemctl status firewalld
+
+remove existing docker if any version present
+yum -y remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine containers-common
+
+
+Install Docker
+yum install -y yum-utils
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+systemctl enable --now docker
+systemctl status docker --no-pager

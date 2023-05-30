@@ -1,0 +1,20 @@
+###########in all k8s nodes ##########################
+#Enable vxlan
+
+modprobe br_netfilter
+lsmod | grep br_netfilter
+
+modprobe overlay #####(not for Master nodes)#####
+
+
+echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
+sysctl -a | grep net.bridge.bridge-nf-call-iptables
+
+containerd config default | sudo tee /etc/containerd/config.toml
+sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
+
+systemctl restart docker
+
+
+swapoff -a
+sed -e '/swap/ s/^#*/#/' -i /etc/fstab
